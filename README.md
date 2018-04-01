@@ -1,9 +1,10 @@
 # EMac
-EMac is to describe for my daily-used softwares, as well as configurations and preference on MacOS
+EMac is to describe for my daily-used softwares, as well as configurations and preference on MacOS, inspired by the idea:[infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_Code)
 
 ## Update OS related package
 1. Update operate system to the latest version
 2. brew update
+3. xcode-select --install
 
 ## Terminal
 [ITerm](https://www.iterm2.com/)
@@ -111,3 +112,47 @@ Thumbs.db
 # rails
 .byebug_history
 ```
+
+## command line tool
+### mycli & pgcli
+[MyCLI](https://www.mycli.net/) is a command line interface for MySQL, MariaDB, and Percona with auto-completion and syntax highlighting.
+[Pgcli](https://www.pgcli.com/) Pgcli is a command line interface for Postgres with auto-completion and syntax highlighting.
+
+### magic-wormhole
+[magic-wormhole](https://github.com/warner/magic-wormhole) helps get things from one computer to another, safely.
+
+### [docker](https://www.docker.com/)
+
+## Softwares
+### xcode
+install xcode from [app store](https://developer.apple.com/xcode/)
+
+### [1passowrd](https://1password.com/)
+
+### VSCODE
+I personally use [VSCODE](https://code.visualstudio.com/) to do front-end work, it's both lightweight and versatile, configurations and plugins can be uploaded to cloud, which means it's easy to reproduce an identical IDE on a new system. Infrastructure as Code!!
+
+### browsers
+No need to say much about [Chrome](https://www.google.com/chrome/) and firefox(https://www.mozilla.org/en-US/firefox/new/), extensions would be sync automatically as soon as login account.
+
+### [Slack](https://slack.com/)
+
+### [Skype](https://skype.com/)
+
+### [Evernote](https://evernote.com/)
+
+### [Dropbox](https://www.dropbox.com)
+
+### [Spectacle](https://www.spectacleapp.com/)
+Move and resize windows with ease. Window control with simple and customizable keyboard shortcuts.
+
+### [Sketch](https://www.sketchapp.com/)
+
+### [Balsamiq Mockup 3](https://balsamiq.com/download/)
+It's been so fast and easy to do mockup stuff with `Balsamiq Mockup 3`, it provides a cute means with comprehensive widgets, Mockup a web page or mobile can be within minutes.
+
+### [Flux](https://justgetflux.com/)
+It makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day. it does works though I never realize it.
+
+### [IINA](https://lhc70000.github.io/iina/)
+The best video player for macOS ever!!
