@@ -132,6 +132,8 @@ install xcode from [app store](https://developer.apple.com/xcode/)
 ### VSCODE
 I personally use [VSCODE](https://code.visualstudio.com/) to do front-end work, it's both lightweight and versatile, configurations and plugins can be uploaded to cloud, which means it's easy to reproduce an identical IDE on a new system. Infrastructure as Code!!
 
+My personal setting locates [here](https://gist.github.com/Dogzhou/70091ca501d339f4cb2c9ea1bcdb585b)
+
 ### browsers
 No need to say much about [Chrome](https://www.google.com/chrome/) and firefox(https://www.mozilla.org/en-US/firefox/new/), extensions would be sync automatically as soon as login account.
 
