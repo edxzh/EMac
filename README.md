@@ -5,6 +5,7 @@ EMac is to describe for my daily-used softwares, as well as configurations and p
 1. Update operate system to the latest version
 2. brew update
 3. xcode-select --install
+4. sudo xcodebuild -license accept
 
 ## Terminal
 [ITerm](https://www.iterm2.com/)
@@ -114,6 +115,12 @@ Thumbs.db
 ```
 
 ## command line tool
+
+### [autojump](https://github.com/wting/autojump)
+autojump provides a faster way to navigate your filesystem
+
+### [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+
 ### mycli & pgcli
 [MyCLI](https://www.mycli.net/) is a command line interface for MySQL, MariaDB, and Percona with auto-completion and syntax highlighting.
 [Pgcli](https://www.pgcli.com/) Pgcli is a command line interface for Postgres with auto-completion and syntax highlighting.
@@ -135,7 +142,7 @@ I personally use [VSCODE](https://code.visualstudio.com/) to do front-end work, 
 My personal setting locates [here](https://gist.github.com/Dogzhou/70091ca501d339f4cb2c9ea1bcdb585b)
 
 ### browsers
-No need to say much about [Chrome](https://www.google.com/chrome/) and firefox(https://www.mozilla.org/en-US/firefox/new/), extensions would be sync automatically as soon as login account.
+No need to say much about [Chrome](https://www.google.com/chrome/) and [firefoxj](https://www.mozilla.org/en-US/firefox/new/), extensions would be sync automatically as soon as login account.
 
 ### [Slack](https://slack.com/)
 
