@@ -1,5 +1,5 @@
 # EMac
-EMac is to describe for my daily-used softwares, as well as configurations and preference on MacOS, inspired by the idea:[infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_Code)
+EMac is to describe for my daily-used softwares, as well as configurations and preference on MacOS, inspired by the idea: [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_Code)
 
 ## Update OS related package
 1. Update operate system to the latest version
@@ -114,7 +114,28 @@ Thumbs.db
 .byebug_history
 ```
 
-## command line tool
+## Develop Environment
+
+### rbenv
+Use [rbenv](https://github.com/rbenv/rbenv) to manage local ruby versions.
+
+```shell
+$ brew install rbenv
+$ rbenv init
+$ gem install bundler
+```
+
+### node
+```shell
+$ brew install node
+```
+
+### Elixir
+```shell
+$ brew install elixir
+```
+
+## Command Line Tool
 
 ### [autojump](https://github.com/wting/autojump)
 autojump provides a faster way to navigate your filesystem
