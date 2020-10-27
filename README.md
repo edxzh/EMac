@@ -67,7 +67,7 @@ $ git config --global core.excludesfile ~/.gitignore_global
 
 Edit `~/.gitignore_global`
 
-## Develop Environment
+## Development Environment Setup
 
 ### rbenv
 Use [rbenv](https://github.com/rbenv/rbenv) to manage local ruby versions.
