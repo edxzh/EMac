@@ -14,7 +14,7 @@ EMac is to describe for my daily-used softwares, as well as configurations and p
 [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 configurations in `~/.zshrc`
-```shell
+```
 ZSH_THEME="arrow"
 export EDITOR='vim'
 plugins=(git ruby rails autojump docker encode64 bundler zsh-autosuggestions)
@@ -61,7 +61,7 @@ $ git config --global core.autocrlf input
 I've seen lots of projects' git ignore file contain OS related or IDE related files, such as `.DS_Store`, `.idea`, or logs file, however project specified ignore file should not care about it, as different developers work with different OS/IDE, git ignore file will become a monolith if every one put their personal OS/IDE ignore pattern there.
 I highly recommend every developer maintains their own global git ignore file according to their preference, so `.gitignore` file inside project repository only care about project own files at framework/language level.
 
-```shell
+```
 $ git config --global core.excludesfile ~/.gitignore_global
 ```
 
@@ -69,23 +69,26 @@ Edit `~/.gitignore_global`
 
 ## Development Environment Setup
 
-### rbenv
-Use [rbenv](https://github.com/rbenv/rbenv) to manage local ruby versions.
+### asdf
+Use [asdf](https://github.com/asdf-vm/asdf) to manage multiple runtime versions.
 
-```shell
-$ brew install rbenv
-$ rbenv init
-$ gem install bundler
+```
+$ brew install asdf
+$ echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
+$ asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+$ asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+$ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 ```
 
-### node
-```shell
-$ brew install node
+add the following to `$HOME/.asdfrc`:
+
+```
+legacy_version_file = yes
 ```
 
-### Elixir
-```shell
-$ brew install elixir
+### tig
+```
+$ brew install tig
 ```
 
 ## Command Line Tool
