@@ -75,6 +75,7 @@ Use [asdf](https://github.com/asdf-vm/asdf) to manage multiple runtime versions.
 ```
 $ brew install asdf
 $ echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
+$ zsh
 $ asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 $ asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 $ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git

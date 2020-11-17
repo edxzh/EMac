@@ -33,6 +33,7 @@
 ._*
 .Spotlight-V100
 .Trashes
+.vscode
 ehthumbs.db
 Thumbs.db
 
@@ -41,3 +42,8 @@ Thumbs.db
 *.swp
 *.swo
 
+# rails
+.byebug_history
+
+# ctags
+/tags
