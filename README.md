@@ -18,6 +18,10 @@ configurations in `~/.zshrc`
 ZSH_THEME="arrow"
 export EDITOR='vim'
 plugins=(git ruby rails autojump docker encode64 bundler zsh-autosuggestions)
+
+git config --global pull.rebase true
+git config --global fetch.prune true
+git config --global diff.colorMoved zebra
 ```
 
 ## IDE
