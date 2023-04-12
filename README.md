@@ -127,8 +127,6 @@ No need to say much about [Chrome](https://www.google.com/chrome/) and [firefoxj
 
 ### [Slack](https://slack.com/)
 
-### [Skype](https://skype.com/)
-
 ### [Dropbox](https://www.dropbox.com)
 
 ### [Spectacle](https://www.spectacleapp.com/)
@@ -136,9 +134,6 @@ Move and resize windows with ease. Window control with simple and customizable k
 
 ### [Balsamiq Mockup 3](https://balsamiq.com/download/)
 It's been so fast and easy to do mockup stuff with `Balsamiq Mockup 3`, it provides a cute means with comprehensive widgets, Mockup a web page or mobile can be within minutes.
-
-### [Flux](https://justgetflux.com/)
-It makes the color of your computer's display adapt to the time of day, warm at night and like sunlight during the day. it does works though I never realize it.
 
 ### [IINA](https://lhc70000.github.io/iina/)
 The best video player for macOS ever!!
