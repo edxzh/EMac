@@ -107,6 +107,9 @@ $ brew install tig
 ### [autojump](https://github.com/wting/autojump)
 autojump provides a faster way to navigate your filesystem
 
+### [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+Fish shell-like syntax highlighting for Zsh
+
 ### [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 ### [docker](https://www.docker.com/)
@@ -114,8 +117,6 @@ autojump provides a faster way to navigate your filesystem
 ## Softwares
 ### xcode
 install xcode from [app store](https://developer.apple.com/xcode/)
-
-### [1passowrd](https://1password.com/)
 
 ### VSCODE
 I personally use [VSCODE](https://code.visualstudio.com/) to do front-end work, it's both lightweight and versatile, configurations and plugins can be uploaded to cloud, which means it's easy to reproduce an identical IDE on a new system. Infrastructure as Code!!
