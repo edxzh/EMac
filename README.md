@@ -22,7 +22,7 @@ configurations in `~/.zshrc`
 ```
 ZSH_THEME="arrow"
 export EDITOR='vim'
-plugins=(git autojump encode64 zsh-autosuggestions)
+plugins=(git autojump encode64 zsh-autosuggestions zsh-bat)
 
 git config --global pull.rebase true
 git config --global fetch.prune true
@@ -36,23 +36,6 @@ $ brew install vim --with-override-system-vi
 ```
 ### vim configuration
 follow the instruction: [https://github.com/Dogzhou/vim_config](https://github.com/Dogzhou/vim_config)
-
-### install ctags
-normally the result of executing `ctags -R` will cause an issue
-```shell
-$ ctags -R --exclude=.git --exclude=log *
-ctags: illegal option -- R
-usage: ctags [-BFadtuwvx] [-f tagsfile] file ...
-```
-
-That's saying new `ctags` should be installed rather than original one.
-```shell
-$ brew install ctags
-```
-alias ctags in `~/.zshrc`
-```shell
-alias ctags="`brew --prefix`/bin/ctags"
-```
 
 ## GIT
 install
@@ -78,23 +61,13 @@ Edit `~/.gitignore_global`
 
 ## Development Environment Setup
 
-### asdf
-Use [asdf](https://github.com/asdf-vm/asdf) to manage multiple runtime versions.
+### bat
+brew install bat
 
-```
-brew install asdf
-echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
-zsh
-asdf plugin add ruby
-asdf plugin add erlang
-asdf plugin add elixir
-asdf plugin add nodejs
+# https://github.com/fdellwing/zsh-bat
+git clone https://github.com/fdellwing/zsh-bat.git $ZSH_CUSTOM/plugins/zsh-bat
 ```
 
-add the following to `$HOME/.asdfrc`:
-
-```
-legacy_version_file = yes
 ```
 
 ### tig
