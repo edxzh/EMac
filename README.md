@@ -101,6 +101,8 @@ No need to say much about [Chrome](https://www.google.com/chrome/) and [firefoxj
 
 ### [Slack](https://slack.com/)
 
+### [Notion](https://www.notion.com/deskto)
+
 ### [Dropbox](https://www.dropbox.com)
 
 ### [Spectacle](https://www.spectacleapp.com/)
