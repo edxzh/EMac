@@ -62,12 +62,11 @@ Edit `~/.gitignore_global`
 ## Development Environment Setup
 
 ### bat
+```
 brew install bat
 
 # https://github.com/fdellwing/zsh-bat
 git clone https://github.com/fdellwing/zsh-bat.git $ZSH_CUSTOM/plugins/zsh-bat
-```
-
 ```
 
 ### tig
