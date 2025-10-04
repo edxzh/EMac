@@ -20,7 +20,6 @@ https://brew.sh/
 
 configurations in `~/.zshrc`
 ```
-ZSH_THEME="arrow"
 export EDITOR='vim'
 plugins=(git autojump encode64 zsh-autosuggestions zsh-bat)
 
@@ -28,14 +27,6 @@ git config --global pull.rebase true
 git config --global fetch.prune true
 git config --global diff.colorMoved zebra
 ```
-
-## IDE
-the built-in `vi` with OS is not the `vim` developer used to use, it only has limited functions, so `vim` must be installed mannually.
-```shell
-$ brew install vim --with-override-system-vi
-```
-### vim configuration
-follow the instruction: [https://github.com/Dogzhou/vim_config](https://github.com/Dogzhou/vim_config)
 
 ## GIT
 install
@@ -49,6 +40,7 @@ $ git config --global user.email youremail
 $ git config --global pull.rebase true
 $ git config --global core.autocrlf input
 ```
+
 ### global ignore
 I've seen lots of projects' git ignore file contain OS related or IDE related files, such as `.DS_Store`, `.idea`, or logs file, however project specified ignore file should not care about it, as different developers work with different OS/IDE, git ignore file will become a monolith if every one put their personal OS/IDE ignore pattern there.
 I highly recommend every developer maintains their own global git ignore file according to their preference, so `.gitignore` file inside project repository only care about project own files at framework/language level.
