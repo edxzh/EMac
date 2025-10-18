@@ -1,106 +1,238 @@
-# EMac
-EMac is to describe for my daily-used softwares, as well as configurations and preference on MacOS, inspired by the idea: [infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_Code)
+# EMac 🍎
 
-## Homebrew
+> **Infrastructure as Code for macOS Development Environment**
+
+EMac is a comprehensive guide to my daily-used software, configurations, and preferences on macOS, inspired by the concept of [Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_Code). This repository serves as a blueprint for setting up a productive development environment on macOS.
+
+## 📋 Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [System Setup](#system-setup)
+- [Development Tools](#development-tools)
+- [Command Line Tools](#command-line-tools)
+- [Applications](#applications)
+- [Configuration Files](#configuration-files)
+- [Contributing](#contributing)
+- [License](#license)
+
+## 🚀 Prerequisites
+
+### Homebrew
+The essential package manager for macOS:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-https://brew.sh/
+
+Visit [brew.sh](https://brew.sh/) for more information.
+
+## 🔧 System Setup
+
+### 1. Update macOS and Development Tools
+
+```bash
+# 1. Update macOS to the latest version via System Preferences
+# 2. Update Homebrew packages
+brew update && brew upgrade
+
+# 3. Install Xcode Command Line Tools
+xcode-select --install
+
+# 4. Accept Xcode license
+sudo xcodebuild -license accept
 ```
 
-## Update OS related package
-1. Update operate system to the latest version
-2. brew update
-3. xcode-select --install
-4. sudo xcodebuild -license accept
+## 🛠 Development Tools
 
-## Terminal
-[ITerm](https://www.iterm2.com/)
+### Terminal & Shell
 
-## Shell
-[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+#### iTerm2
+A powerful terminal emulator for macOS:
+- **Download**: [iTerm2](https://www.iterm2.com/)
+- **Features**: Split panes, hotkeys, profiles, and extensive customization
 
-configurations in `~/.zshrc`
-```
+#### Oh My Zsh
+Framework for managing Zsh configuration:
+- **Installation**: [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+- **Configuration**: `~/.zshrc`
+
+```bash
+# Essential zsh configuration
 export EDITOR='vim'
 plugins=(git autojump encode64 zsh-autosuggestions zsh-bat)
 
+# Git configurations
 git config --global pull.rebase true
 git config --global fetch.prune true
 git config --global diff.colorMoved zebra
 ```
 
-## GIT
-install
-```shell
-$ brew install git
-```
-configuration
-```shell
-$ git config --global user.username yourusername
-$ git config --global user.email youremail
-$ git config --global pull.rebase true
-$ git config --global core.autocrlf input
+### Git Setup
+
+#### Installation
+```bash
+brew install git
 ```
 
-### global ignore
-I've seen lots of projects' git ignore file contain OS related or IDE related files, such as `.DS_Store`, `.idea`, or logs file, however project specified ignore file should not care about it, as different developers work with different OS/IDE, git ignore file will become a monolith if every one put their personal OS/IDE ignore pattern there.
-I highly recommend every developer maintains their own global git ignore file according to their preference, so `.gitignore` file inside project repository only care about project own files at framework/language level.
+#### Configuration
+```bash
+# Basic user configuration
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
 
+# Recommended settings
+git config --global pull.rebase true
+git config --global core.autocrlf input
+git config --global init.defaultBranch main
 ```
-$ git config --global core.excludesfile ~/.gitignore_global
+
+#### Global Git Ignore
+Maintain a global `.gitignore` file to avoid cluttering project-specific ignore files with OS/IDE-related patterns:
+
+```bash
+# Set global gitignore file
+git config --global core.excludesfile ~/.gitignore_global
 ```
 
-Edit `~/.gitignore_global`
+Create and edit `~/.gitignore_global` with common patterns:
+```gitignore
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-## Development Environment Setup
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-### bat
+# Logs
+*.log
+logs/
 ```
+
+### Development Environment
+
+#### bat - Better cat
+Syntax highlighting for code files:
+```bash
 brew install bat
 
-# https://github.com/fdellwing/zsh-bat
+# Install zsh-bat plugin
 git clone https://github.com/fdellwing/zsh-bat.git $ZSH_CUSTOM/plugins/zsh-bat
 ```
 
-### tig
+#### tig - Text-mode interface for Git
+```bash
+brew install tig
 ```
-$ brew install tig
+
+## 🔨 Command Line Tools
+
+### Navigation & Productivity
+
+#### [autojump](https://github.com/wting/autojump)
+Faster filesystem navigation:
+```bash
+brew install autojump
 ```
 
-## Command Line Tool
+#### [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+Fish shell-like syntax highlighting for Zsh:
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
 
-### [autojump](https://github.com/wting/autojump)
-autojump provides a faster way to navigate your filesystem
+#### [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+Automatic command suggestions based on history:
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
 
-### [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
-Fish shell-like syntax highlighting for Zsh
+### Containerization
 
-### [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+#### [Docker](https://www.docker.com/)
+Container platform for development and deployment:
+```bash
+brew install --cask docker
+```
 
-### [docker](https://www.docker.com/)
+## 📱 Applications
 
-## Softwares
-### xcode
-install xcode from [app store](https://developer.apple.com/xcode/)
+### Development
 
-### VSCODE
-I personally use [VSCODE](https://code.visualstudio.com/) to do front-end work, it's both lightweight and versatile, configurations and plugins can be uploaded to cloud, which means it's easy to reproduce an identical IDE on a new system. Infrastructure as Code!!
+#### Xcode
+Apple's integrated development environment:
+- **Download**: [App Store](https://developer.apple.com/xcode/)
+- **Usage**: iOS/macOS development, debugging, and testing
 
-My personal setting locates [here](https://gist.github.com/Dogzhou/70091ca501d339f4cb2c9ea1bcdb585b)
+#### Visual Studio Code
+Lightweight yet powerful code editor:
+- **Download**: [VS Code](https://code.visualstudio.com/)
+- **Features**: Extensions, cloud sync, integrated terminal
+- **Personal Settings**: [Configuration Gist](https://gist.github.com/Dogzhou/70091ca501d339f4cb2c9ea1bcdb585b)
 
-### browsers
-No need to say much about [Chrome](https://www.google.com/chrome/) and [firefoxj](https://www.mozilla.org/en-US/firefox/new/), extensions would be sync automatically as soon as login account.
+### Browsers
 
-### [Slack](https://slack.com/)
+#### Chrome & Firefox
+Essential web browsers with automatic extension synchronization:
+- **Chrome**: [Download](https://www.google.com/chrome/)
+- **Firefox**: [Download](https://www.mozilla.org/en-US/firefox/new/)
 
-### [Notion](https://www.notion.com/deskto)
+### Communication & Productivity
 
-### [Dropbox](https://www.dropbox.com)
+#### [Slack](https://slack.com/)
+Team communication platform
 
-### [Spectacle](https://www.spectacleapp.com/)
-Move and resize windows with ease. Window control with simple and customizable keyboard shortcuts.
+#### [Notion](https://www.notion.com/desktop)
+All-in-one workspace for notes, docs, and collaboration
 
-### [Balsamiq Mockup 3](https://balsamiq.com/download/)
-It's been so fast and easy to do mockup stuff with `Balsamiq Mockup 3`, it provides a cute means with comprehensive widgets, Mockup a web page or mobile can be within minutes.
+#### [Dropbox](https://www.dropbox.com)
+Cloud storage and file synchronization
 
-### [IINA](https://lhc70000.github.io/iina/)
-The best video player for macOS ever!!
+### Utilities
+
+#### [Spectacle](https://www.spectacleapp.com/)
+Window management with keyboard shortcuts:
+- Move and resize windows efficiently
+- Customizable hotkeys for window positioning
+
+#### [Balsamiq Mockups 3](https://balsamiq.com/download/)
+Rapid wireframing and prototyping tool:
+- Quick mockup creation for web and mobile
+- Comprehensive widget library
+- Intuitive drag-and-drop interface
+
+#### [IINA](https://lhc70000.github.io/iina/)
+Modern video player for macOS:
+- Native macOS design
+- Advanced playback features
+- Extensive format support
+
+## 📁 Configuration Files
+
+This repository includes configuration files for:
+- Shell configuration (`~/.zshrc`)
+- Git global settings
+- VS Code settings and extensions
+- Terminal profiles and themes
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
